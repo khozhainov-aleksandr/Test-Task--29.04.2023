@@ -1,0 +1,53 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 140px;
+  height: 100%;
+  width: 250px;
+}
+
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 28px;
+}
+
+.navigation li {
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.avatarWrapper {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.avatar {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+}
+
+.settingsWrapper {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.2);
+}
+
+.settings {
+  width: 20px;
+  height: 20px;
+}
