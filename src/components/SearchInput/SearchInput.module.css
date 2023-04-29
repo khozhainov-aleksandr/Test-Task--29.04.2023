@@ -1,0 +1,20 @@
+.searchInput {
+  display: block;
+  padding: 8px 12px;
+  width: 300px;
+  height: 26px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 400;
+  color: #212529;
+  background-color: #F0F3F5;
+  background-clip: padding-box;
+  border: none;
+  border-radius: 4px;
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.15s ease-in-out;
+}
+
+.searchInput:focus {
+  outline: 2px solid #7CB342;
+}
