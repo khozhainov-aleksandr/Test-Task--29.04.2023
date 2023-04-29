@@ -1,0 +1,19 @@
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 6px;
+}
+
+.logo * {
+  cursor: pointer;
+}
+
+.mainLogo {
+  height: 60px;
+  width: 60px;
+}
+
+.logoTitle {
+  color: #7CB342;
+  text-transform: uppercase;
+}
