@@ -6,6 +6,14 @@ import AvatarIcon from '../../img/avatar.png';
 import SettingsIcon from '../../icon/settings.svg';
 import styles from './NavigationMenu.module.css'
 
+const linkForRouting = [
+  { title: 'coming', showName: 'Приход' },
+  { title: 'groups', showName: 'Группы' },
+  { title: 'products', showName: 'Продукты' },
+  { title: 'users', showName: 'Пользователи' },
+  { title: 'settings', showName: 'Настройки' },
+];
+
 const NavigationMenu: React.FC = () => {
   const router = useRouter();
   const activeLink: string = router.pathname;
@@ -28,21 +36,20 @@ const NavigationMenu: React.FC = () => {
         </div>
       </Link>
       <ul>
-        <li className={activeLink === '/coming' ? [styles.activeLink] : ''}>
-          <Link href="/coming">Приход</Link>
-        </li>
-        <li className={activeLink === '/groups' ? [styles.activeLink] : ''}>
-          <Link href="/groups">Группы</Link>
-        </li>
-        <li className={activeLink === '/products' ? [styles.activeLink] : ''}>
-          <Link href="/products">Продукты</Link>
-        </li>
-        <li className={activeLink === '/users' ? [styles.activeLink] : ''}>
-          <Link href="/users">Пользователи</Link>
-        </li>
-        <li className={activeLink === '/settings' ? [styles.activeLink] : ''}>
-          <Link href="/settings">Настройки</Link>
-        </li>
+        {linkForRouting.map((link, i) => (
+          <li
+            key={i}
+            className={
+              activeLink === `/${link.title}`
+              ? [styles.activeLink]
+              : ''
+            }
+          >
+            <Link href={`/${link.title}`}>
+              {link.showName}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   )
