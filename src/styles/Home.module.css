@@ -1,6 +1,14 @@
 .main {
-  padding-top: 130px;
-  padding-left: 280px;
+  padding-top: 160px;
+  padding-left: calc(220px + 100px);
+  padding-right: 100px;
   min-height: 100vh;
   background-color: #F0F3F5;
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
