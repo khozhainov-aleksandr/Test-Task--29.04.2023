@@ -25,7 +25,7 @@ export const orders = [
 export const products = [
   {
     id: 1,
-    serialNumber: 1234,
+    serialNumber: 5624,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -36,15 +36,15 @@ export const products = [
       end: '2017-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
-      {value: 2600, symbol: 'UAH', isDefault: 1}
+      {value: 100, symbol: 'USD', isDefault: 1},
+      {value: 2600, symbol: 'UAH', isDefault: 0}
     ],
     order: 1,
     date: '2017-06-29 12:09:33'
   },
   {
     id: 2,
-    serialNumber: 1234,
+    serialNumber: 3425,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -63,7 +63,7 @@ export const products = [
   },
   {
     id: 3,
-    serialNumber: 1234,
+    serialNumber: 4567,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -82,7 +82,7 @@ export const products = [
   },
   {
     id: 4,
-    serialNumber: 1234,
+    serialNumber: 6574,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -93,15 +93,15 @@ export const products = [
       end: '2017-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
-      {value: 2600, symbol: 'UAH', isDefault: 1}
+      {value: 100, symbol: 'USD', isDefault: 1},
+      {value: 2600, symbol: 'UAH', isDefault: 0}
     ],
     order: 1,
     date: '2017-06-29 12:09:33'
   },
   {
     id: 5,
-    serialNumber: 1234,
+    serialNumber: 7895,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -120,7 +120,7 @@ export const products = [
   },
   {
     id: 6,
-    serialNumber: 1234,
+    serialNumber: 1345,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -139,7 +139,7 @@ export const products = [
   },
   {
     id: 7,
-    serialNumber: 1234,
+    serialNumber: 4678,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -158,7 +158,7 @@ export const products = [
   },
   {
     id: 8,
-    serialNumber: 1234,
+    serialNumber: 4567,
     isNew: 1,
     photo: 'pathToFile.jpg',
     title: 'Product 1',
@@ -174,5 +174,24 @@ export const products = [
     ],
     order: 2,
     date: '2017-06-29 12:09:33'
-  }
+  },
+  {
+    id: 9,
+    serialNumber: 9257,
+    isNew: 1,
+    photo: 'pathToFile.jpg',
+    title: 'Product 1',
+    type: 'Monitors',
+    specification: 'Specification 1',
+    guarantee: {
+      start: '2017-06-29 12:09:33',
+      end: '2017-06-29 12:09:33'
+    },
+    price: [
+      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 2600, symbol: 'UAH', isDefault: 1}
+    ],
+    order: 2,
+    date: '2017-06-29 12:09:33'
+  },
 ]
