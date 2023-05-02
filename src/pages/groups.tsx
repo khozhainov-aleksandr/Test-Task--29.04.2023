@@ -9,11 +9,26 @@ import deleteIcon from '../icon/delete.svg';
 import photoProdIcon from '../img/monitor.jpg';
 import styles from '@/styles/Groups.module.css'
 
+interface Product {
+  id: number;
+  serialNumber: number;
+  isNew: number;
+  photo: string;
+  title: string;
+  type: string;
+  specification: string;
+  guarantee: { start: string; end: string; }
+  price: { value: number; symbol: string; isDefault: number; }[]
+  order: number;
+  date: string;
+};
+
 const Groups = () => {
-  const [prodList, setProdList] = useState([]);
+  const [prodList, setProdList] = useState<Product[]>([]);
   
   const getProductsList = (id: number) => {
-    setProdList(() => products.filter((product) => product.order === id));
+    const newProdList: Product[] = products.filter((product): boolean => product.order === id);
+    setProdList(newProdList);
   }
 
   return (
@@ -57,7 +72,7 @@ const Groups = () => {
               <Image src={addProductIcon} alt='icon add product' />
               <p className={styles.addProductDes}>Добавить продукт</p>
             </div>
-            {products.map((prod) => {
+            {prodList.map((prod) => {
               const {
                 id, 
                 title,
