@@ -1,20 +1,34 @@
 import Image from 'next/image';
+
 import productImage from '../../img/monitor.jpg';
 import deleteIcon from '../../icon/delete-red.svg';
 import styles from './DeletePopUp.module.css';
 
-const DeletePopUp = () => {
-  const getClosePopUp = () => {
-    console.log('✅', 'Close Pop-Up');
-  }
+interface Props {
+  setPopUpClose: boolean;
+  deleteEl: {
+    id: number;
+    serialNumber: number;
+    isNew: number;
+    photo: string;
+    title: string;
+    type: string;
+    specification: string;
+    guarantee: { start: string; end: string; }
+    price: { value: number; symbol: string; isDefault: number; }[]
+    order: number;
+    date: string;
+  };
+}
 
-  const getCancelProd = () => {
-    console.log('✅', 'Cancel');
-  }
+const DeletePopUp = ({ setPopUpClose, deleteEl }: Props) => {
+  const {type, title, serialNumber} = deleteEl;
 
-  const getDeleteProd = () => {
-    console.log('✅', 'Delete');
-  }
+  const getClosePopUp = () => setPopUpClose(false);
+
+  const getCancelProd = () => alert('Cancel');
+
+  const getDeleteProd = () => alert('Delete');
 
   return (
     <div className={styles.popUpWrapper}>
@@ -30,10 +44,10 @@ const DeletePopUp = () => {
           <Image className={styles.prodCardImg} src={productImage} alt="Image product" />
           <div className={styles.prodCardDesWrapper}>
             <p className={styles.prodCardDes}>
-              Монитор 28&quot; Samsung Odyssey G7 S28AG702 4K HDR400 / IPS 8-Bit / 144Гц
+              {type}: {title}
             </p>
             <p className={styles.prodCardSerNum}>
-              Serial Number: 3425
+              Serial Number: {serialNumber}
             </p>
           </div>
         </div>
