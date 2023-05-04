@@ -2,13 +2,11 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { orders, products } from '../pages/api/app';
-import DeletePopUp from '@/components/DeletePopUp/DeletePopUp';
+import Products from '@/components/Products/Products';
 
 import addGroupsIcon from '../icon/round-add-button.svg';
 import hamburgerIcon from '../icon/hamburger-list-menu.svg'
 import addProductIcon from '../icon/add-button.svg';
-import deleteIcon from '../icon/delete.svg';
-import photoProdIcon from '../img/monitor.jpg';
 import styles from '@/styles/Groups.module.css'
 
 interface Product {
@@ -27,8 +25,6 @@ interface Product {
 
 const Groups = () => {
   const [prodList, setProdList] = useState<Product[]>([]);
-  const [deleteEl, setDeleteEl] = useState<Product>();
-  const [popUp, setPopUp] = useState<boolean>(false);
 
   const prodSort = () => {
     const obj = {};
@@ -44,15 +40,6 @@ const Groups = () => {
     const newProdList: Product[] = products.filter((product): boolean => product.order === id);
     setProdList(newProdList);
   }
-
-  const openPopUp = () => setPopUp(true);
-
-  const getCurrentElement = (id: number) => {
-    const currentElement: Product | undefined = products.find((product): boolean => product.id === id);
-    setDeleteEl(currentElement);
-  }
-
-  const pullDataPopUp = (data: boolean) => setPopUp(data);
 
   return (
     <main className={styles.main}>
@@ -103,59 +90,10 @@ const Groups = () => {
               <Image src={addProductIcon} alt='icon add product' />
               <p className={styles.addProductDes}>Добавить продукт</p>
             </div>
-            {prodList.map((prod) => {
-              const {
-                id,
-                isNew,
-                title,
-                type,
-                specification,
-                guarantee,
-                serialNumber,
-                price
-              } = prod;
-
-              return (
-                <div key={id} className={styles.productBox}>
-                  <span className={isNew ? [styles.statusBePresent] : [styles.statusAbsent]} />
-                  <Image className={styles.productBoxPhoto} src={photoProdIcon} alt="Photo product icon" />
-                  <div className={styles.productBoxTypeWrapper}>
-                    <p className={styles.productBoxType}>{type}</p>
-                    <h6 className={styles.productBoxTitle}>{title}</h6>
-                  </div>
-                  <div className={styles.productBoxDescWrapper}>
-                    <p className={styles.productBoxDescSpec}>{specification}</p>
-                    <p className={styles.productBoxDescGuar}>Guarantee: {guarantee.end}</p>
-                  </div>
-                  <div className={styles.productBoxPriceWrapper}>
-                    <p className={styles.productBoxPrice}>Price:
-                      <span>
-                        {price.map((p) => p.isDefault ? (` ${p.value} ${p.symbol}`) : '')}
-                      </span>
-                    </p>
-                    <p className={styles.productBoxNumber}>Serial Number: {serialNumber}</p>
-                  </div>
-                  <Image
-                    className={styles.productBoxDelete}
-                    src={deleteIcon}
-                    alt="Delete icon"
-                    onClick={() => {
-                      getCurrentElement(id);
-                      openPopUp();
-                    }}
-                  />
-                </div>
-              )
-            })}
+            <Products prodList={prodList} />
           </div>
         )}
       </div>
-      {popUp && (
-        <DeletePopUp
-          setPopUpClose={pullDataPopUp}
-          deleteEl={deleteEl}
-        />
-      )}
     </main>
   )
 }
