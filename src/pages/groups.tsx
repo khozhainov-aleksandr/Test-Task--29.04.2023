@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-import { orders, products } from '../pages/api/app';
+import { orders } from '../pages/api/app';
+import PageTitleQuantity from '@/components/PageTitleQuantity/PageTitleQuantity';
 import Products from '@/components/Products/Products';
 import Orders from '@/components/Orders/Orders';
 
-import addGroupsIcon from '../icon/round-add-button.svg';
 import addProductIcon from '../icon/add-button.svg';
 import styles from '@/styles/Groups.module.css'
 
@@ -32,15 +32,7 @@ const Groups = () => {
 
   return (
     <main className={styles.main}>
-      <div className={styles.addGroupsWrapper}>
-        <button className={styles.addGroupsBtn}>
-          <Image
-            src={addGroupsIcon}
-            alt='Round button for add new group'
-          />
-        </button>
-        <h1 className={styles.addGroupsTitle}>Группы / {orders.length}</h1>
-      </div>
+      <PageTitleQuantity title='Группы' quantity={orders.length} />
       <div className={styles.groupAndProductWrapper}>
         <Orders filterProdList={pullProdList} />
         {prodList.length >= 1 && (
