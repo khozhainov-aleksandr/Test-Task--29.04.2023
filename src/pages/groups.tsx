@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
+
 import { orders, products } from '../pages/api/app';
+import DeletePopUp from '@/components/DeletePopUp/DeletePopUp';
 
 import addGroupsIcon from '../icon/round-add-button.svg';
 import hamburgerIcon from '../icon/hamburger-list-menu.svg'
@@ -25,11 +27,32 @@ interface Product {
 
 const Groups = () => {
   const [prodList, setProdList] = useState<Product[]>([]);
+  const [deleteEl, setDeleteEl] = useState<Product>();
+  const [popUp, setPopUp] = useState<boolean>(false);
+
+  const prodSort = () => {
+    const obj = {};
+
+    products.forEach((el: Product) => {
+      obj[el.order] = (obj[el.order] || 0) + 1;
+    });
+
+    return Object.entries(obj);
+  }
   
   const getProductsList = (id: number) => {
     const newProdList: Product[] = products.filter((product): boolean => product.order === id);
     setProdList(newProdList);
   }
+
+  const openPopUp = () => setPopUp(true);
+
+  const getCurrentElement = (id: number) => {
+    const currentElement: Product | undefined = products.find((product): boolean => product.id === id);
+    setDeleteEl(currentElement);
+  }
+
+  const pullDataPopUp = (data: boolean) => setPopUp(data);
 
   return (
     <main className={styles.main}>
@@ -44,26 +67,34 @@ const Groups = () => {
       </div>
       <div className={styles.groupAndProductWrapper}>
         <div className={styles.groupWrapper}>
-          {orders.map((order, i) => (
-            <div key={i} className={styles.groupBox}>
-              <button
-                className={styles.hamburgerBtn}
-                onClick={(e) => {
-                  getProductsList(order.id);
-                }}
-              >
-                <Image src={hamburgerIcon} alt='Hamburger Icon' />
-              </button>
-              <p className={styles.productQuantity}>
-                <span>23</span>
-                Продукта
-              </p>
-              <p className={styles.productDate}>
-                <span>Время</span>
-                {order.date}
-              </p>
-            </div>
-          ))}
+          {orders.map((order, i) => {
+            let countProd: number = 0;
+
+            prodSort().forEach(prod => {
+              order.id === Number(prod[0]) && (countProd = prod[1])
+            });
+
+            return (
+              <div key={i} className={styles.groupBox}>
+                <button
+                  className={styles.hamburgerBtn}
+                  onClick={(e) => {
+                    getProductsList(order.id);
+                  }}
+                >
+                  <Image src={hamburgerIcon} alt='Hamburger Icon' />
+                </button>
+                <p className={styles.productQuantity}>
+                  <span>{countProd}</span>
+                  Продукта
+                </p>
+                <p className={styles.productDate}>
+                  <span>Время</span>
+                  {order.date}
+                </p>
+              </div>
+            )
+          })}
         </div>
         {prodList.length >= 1 && (
           <div className={styles.productWrapper}>
@@ -74,7 +105,8 @@ const Groups = () => {
             </div>
             {prodList.map((prod) => {
               const {
-                id, 
+                id,
+                isNew,
                 title,
                 type,
                 specification,
@@ -85,7 +117,7 @@ const Groups = () => {
 
               return (
                 <div key={id} className={styles.productBox}>
-                  <span className={styles.productBoxStatus} />
+                  <span className={isNew ? [styles.statusBePresent] : [styles.statusAbsent]} />
                   <Image className={styles.productBoxPhoto} src={photoProdIcon} alt="Photo product icon" />
                   <div className={styles.productBoxTypeWrapper}>
                     <p className={styles.productBoxType}>{type}</p>
@@ -103,13 +135,27 @@ const Groups = () => {
                     </p>
                     <p className={styles.productBoxNumber}>Serial Number: {serialNumber}</p>
                   </div>
-                  <Image className={styles.productBoxDelete} src={deleteIcon} alt="Delete icon" />
+                  <Image
+                    className={styles.productBoxDelete}
+                    src={deleteIcon}
+                    alt="Delete icon"
+                    onClick={() => {
+                      getCurrentElement(id);
+                      openPopUp();
+                    }}
+                  />
                 </div>
               )
             })}
           </div>
         )}
       </div>
+      {popUp && (
+        <DeletePopUp
+          setPopUpClose={pullDataPopUp}
+          deleteEl={deleteEl}
+        />
+      )}
     </main>
   )
 }

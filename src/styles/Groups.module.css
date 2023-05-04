@@ -130,10 +130,17 @@
   border-radius: 6px;
 }
 
-.productBoxStatus {
+.statusBePresent {
   height: 10px;
   width: 10px;
   background-color: #7CB342;
+  border-radius: 100%;
+}
+
+.statusAbsent {
+  height: 10px;
+  width: 10px;
+  background-color: #d40737;
   border-radius: 100%;
 }
 

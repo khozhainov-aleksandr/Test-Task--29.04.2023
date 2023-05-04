@@ -26,7 +26,7 @@ export const products = [
   {
     id: 1,
     serialNumber: 5624,
-    isNew: 1,
+    isNew: 0,
     photo: 'pathToFile.jpg',
     title: 'Alienware',
     type: 'Monitors',
@@ -64,7 +64,7 @@ export const products = [
   {
     id: 3,
     serialNumber: 4567,
-    isNew: 1,
+    isNew: 0,
     photo: 'pathToFile.jpg',
     title: 'LG',
     type: 'Monitors',
@@ -140,7 +140,7 @@ export const products = [
   {
     id: 7,
     serialNumber: 4678,
-    isNew: 1,
+    isNew: 0,
     photo: 'pathToFile.jpg',
     title: 'Dell',
     type: 'Monitors',
