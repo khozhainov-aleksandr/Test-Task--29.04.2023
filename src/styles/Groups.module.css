@@ -38,57 +38,6 @@
   column-gap: 20px;
 }
 
-.groupBox {
-  display: flex;
-  align-items: center;
-  column-gap: 28px;
-  margin-bottom: 14px;
-  padding: 20px 30px;
-  width: 400px;
-  background-color: #fff;
-  border-radius: 8px;
-  border: 1px solid #b3b3b3;
-}
-
-.hamburgerBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  width: 42px;
-  height: 42px;
-  background-color: #fff;
-  border-radius: 100%;
-  cursor: pointer;
-}
-
-.hamburgerBtn img {
-  width: 28px;
-  height: 28px;
-}
-
-.productQuantity {
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.5);
-}
-
-.productQuantity span {
-  display: block;
-  font-size: 20px;
-  color: #000;
-}
-
-.productDate {
-  font-size: 14px;
-  line-height: 20px;
-  color: rgba(0, 0, 0, 0.4);
-}
-
-.productDate span {
-  display: block;
-  color: rgba(0, 0, 0, 0.5);
-}
-
 .productWrapper {
   padding: 24px 32px;
   width: 100%;
