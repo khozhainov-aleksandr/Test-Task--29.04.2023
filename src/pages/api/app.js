@@ -28,7 +28,7 @@ export const products = [
     serialNumber: 5624,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'Alienware',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -47,7 +47,7 @@ export const products = [
     serialNumber: 3425,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'Samsung',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -66,7 +66,7 @@ export const products = [
     serialNumber: 4567,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'LG',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -85,7 +85,7 @@ export const products = [
     serialNumber: 6574,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'Samsung',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -104,7 +104,7 @@ export const products = [
     serialNumber: 7895,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'Dell',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -123,7 +123,7 @@ export const products = [
     serialNumber: 1345,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'LG',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -142,7 +142,7 @@ export const products = [
     serialNumber: 4678,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'Dell',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -161,7 +161,7 @@ export const products = [
     serialNumber: 4567,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'Samsung',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
@@ -180,7 +180,7 @@ export const products = [
     serialNumber: 9257,
     isNew: 1,
     photo: 'pathToFile.jpg',
-    title: 'Product 1',
+    title: 'ViewSonic',
     type: 'Monitors',
     specification: 'Specification 1',
     guarantee: {
