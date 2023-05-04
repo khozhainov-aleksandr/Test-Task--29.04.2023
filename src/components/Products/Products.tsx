@@ -26,7 +26,7 @@ interface Product {
   date: string;
 }
 
-const Products = ({ prodList }: Props) => {
+const Products = ({ prodList = products }: Props) => {
   const [popUp, setPopUp] = useState<boolean>(false);
   const [deleteEl, setDeleteEl] = useState<Product>();
 
