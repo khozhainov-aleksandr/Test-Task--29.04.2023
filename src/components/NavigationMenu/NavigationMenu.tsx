@@ -36,20 +36,21 @@ const NavigationMenu: React.FC = () => {
         </div>
       </Link>
       <ul>
-        {linkForRouting.map((link, i) => (
-          <li
-            key={i}
-            className={
-              activeLink === `/${link.title}`
-              ? [styles.activeLink]
-              : ''
-            }
-          >
-            <Link href={`/${link.title}`}>
-              {link.showName}
-            </Link>
-          </li>
-        ))}
+        {linkForRouting.map((link, i) => {
+          const choiceClass: string[] | string = activeLink === `/${link.title}`
+          ? [styles.activeLink] : ''
+
+          return (
+            <li
+              key={i}
+              className={choiceClass}
+            >
+              <Link href={`/${link.title}`}>
+                {link.showName}
+              </Link>
+            </li>
+          )
+        })}
       </ul>
     </nav>
   )
