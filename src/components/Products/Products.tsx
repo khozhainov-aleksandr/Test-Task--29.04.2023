@@ -142,7 +142,7 @@ const Products = ({ prodList = products, fullProductsList = false }: Props) => {
                 </div>
                 <div className={styles.descWrapper}>
                   <p className={styles.descSpec}>{specification}</p>
-                  <p className={styles.descGuar}>Guarantee: {guarantee.end}</p>
+                  <p className={styles.guarantee}>Guarantee: {guarantee.end}</p>
                 </div>
                 <div className={styles.priceWrapper}>
                   <p className={styles.price}>Price:
