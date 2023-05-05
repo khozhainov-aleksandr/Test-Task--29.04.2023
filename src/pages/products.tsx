@@ -35,7 +35,7 @@ export default function ProductsPage() {
 
   const getInputChoice = (value: string) => {
     let str: string = ''
-    products.forEach((el) => str += el[value] + '•');
+    products.forEach((el: any) => str += el[value] + '•');
     
     const arrDub = str
       .split('•')

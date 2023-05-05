@@ -27,9 +27,9 @@ interface Product {
   date: string;
 }
 
-const Products = ({ prodList = products, fullProductsList = false }: Props) => {
+const Products = ({ prodList = products, fullProductsList = false }: any) => {
   const [popUp, setPopUp] = useState<boolean>(false);
-  const [deleteEl, setDeleteEl] = useState<Product>();
+  const [deleteEl, setDeleteEl] = useState<Product | any>();
 
   const getCurrentElement = (id: number) => {
     const currentElement: Product | undefined = products

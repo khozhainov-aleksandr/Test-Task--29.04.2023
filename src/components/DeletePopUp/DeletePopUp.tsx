@@ -5,7 +5,7 @@ import deleteIcon from '../../icon/delete-red.svg';
 import styles from './DeletePopUp.module.css';
 
 interface Props {
-  setPopUpClose: boolean;
+  setPopUpClose: any;
   deleteEl: {
     id: number;
     serialNumber: number;
