@@ -6,3 +6,15 @@
   background-color: #F0F3F5;
   overflow-x: auto;
 }
+
+.formsWrapper  {
+  position: relative;
+  top: -128px;
+  left: 300px;
+  display: flex;
+  column-gap: 48px;
+}
+
+.formWrapper select {
+  margin-left: 4px;
+}
