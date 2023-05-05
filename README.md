@@ -12,5 +12,6 @@
 - **TypeScript**
 - **React**
 - **Redux**
+- **API**
 - **React-Bootstrap**
 - **Classnames library**
