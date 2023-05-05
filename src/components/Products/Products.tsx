@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import classnames from 'classnames';
 
 import { products } from '@/pages/api/app';
 import DeletePopUp from '@/components/DeletePopUp/DeletePopUp';
@@ -68,9 +69,10 @@ const Products = ({ prodList = products, fullProductsList = false }: any) => {
 
             return (
               <div key={id} className={styles.productBox}>
-                <span className={
-                  isNew ? [styles.statusBePresent] : [styles.statusAbsent]
-                } />
+                <span className={classnames({
+                  [styles.statusBePresent]: isNew,
+                  [styles.statusAbsent]: !isNew,
+                })} />
                 <Image
                   className={styles.photo}
                   src={photoProdIcon}
