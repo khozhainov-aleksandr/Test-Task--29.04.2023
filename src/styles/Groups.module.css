@@ -4,12 +4,15 @@
   padding-right: 100px;
   min-height: 100vh;
   background-color: #F0F3F5;
+  overflow-x: auto;
 }
 
 .groupAndProductWrapper {
   display: flex;
   justify-content: space-between;
   column-gap: 20px;
+  min-width: max-content;
+  max-width: auto;
 }
 
 .productWrapper {
