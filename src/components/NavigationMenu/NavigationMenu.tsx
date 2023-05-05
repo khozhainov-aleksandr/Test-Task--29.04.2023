@@ -37,7 +37,7 @@ const NavigationMenu: React.FC = () => {
       </Link>
       <ul>
         {linkForRouting.map((link, i) => {
-          const choiceClass: string[] | string = activeLink === `/${link.title}`
+          const choiceClass: any = activeLink === `/${link.title}`
           ? [styles.activeLink] : ''
 
           return (
