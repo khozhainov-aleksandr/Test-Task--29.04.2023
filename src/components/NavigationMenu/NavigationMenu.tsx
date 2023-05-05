@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link'
 import Image from 'next/image'
+import classnames from 'classnames';
 
 import AvatarIcon from '../../img/avatar.png';
 import SettingsIcon from '../../icon/settings.svg';
@@ -14,7 +15,7 @@ const linkForRouting = [
   { title: 'settings', showName: 'Настройки' },
 ];
 
-const NavigationMenu: React.FC = () => {
+const NavigationMenu = () => {
   const router = useRouter();
   const activeLink: string = router.pathname;
 
@@ -37,13 +38,12 @@ const NavigationMenu: React.FC = () => {
       </Link>
       <ul>
         {linkForRouting.map((link, i) => {
-          const choiceClass: any = activeLink === `/${link.title}`
-          ? [styles.activeLink] : ''
-
           return (
             <li
               key={i}
-              className={choiceClass}
+              className={classnames({
+                [styles.activeLink]: activeLink === `/${link.title}`
+              })}
             >
               <Link href={`/${link.title}`}>
                 {link.showName}
