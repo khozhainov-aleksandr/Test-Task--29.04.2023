@@ -30,13 +30,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'Alienware',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'IPS • 3840x2160 • 16:9 • HDMI • DisplayPort • 144 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 1},
+      {value: 50, symbol: 'USD', isDefault: 1},
       {value: 2600, symbol: 'UAH', isDefault: 0}
     ],
     order: 1,
@@ -49,13 +49,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'Samsung',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'IPS • 2560x1440 • 16:9 • HDMI • DisplayPort • 165 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 193, symbol: 'USD', isDefault: 0},
       {value: 2600, symbol: 'UAH', isDefault: 1}
     ],
     order: 1,
@@ -68,13 +68,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'LG',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'IPS • 2560x1440 • 16:9 • HDMI (2x) • DisplayPort • 165 Гц ',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 83, symbol: 'USD', isDefault: 0},
       {value: 2600, symbol: 'UAH', isDefault: 1}
     ],
     order: 1,
@@ -87,13 +87,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'Samsung',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'Nano IPS • 2560x1440 • 16:9 • HDMI (2x) • DisplayPort • 165 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 1},
+      {value: 118, symbol: 'USD', isDefault: 1},
       {value: 2600, symbol: 'UAH', isDefault: 0}
     ],
     order: 1,
@@ -106,13 +106,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'Dell',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'QD-OLED • 3440x1440 • 21:9 • HDMI (2x) • DisplayPort • 175 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 68, symbol: 'USD', isDefault: 0},
       {value: 2600, symbol: 'UAH', isDefault: 1}
     ],
     order: 2,
@@ -125,13 +125,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'LG',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'IPS • 2560x1440 • 16:9 • HDMI (2x) • DisplayPort • 144 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 152, symbol: 'USD', isDefault: 0},
       {value: 2600, symbol: 'UAH', isDefault: 1}
     ],
     order: 2,
@@ -144,13 +144,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'Dell',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'IPS • 3840 x 2160 • 16:9 • HDMI (HDCP 2.2) • DisplayPort (HDCP 2.2) • 60 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 130, symbol: 'USD', isDefault: 0},
       {value: 2600, symbol: 'UAH', isDefault: 1}
     ],
     order: 2,
@@ -163,13 +163,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'Samsung',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'IPS • 3840x2160 • 16:9 • HDMI (2x) • DisplayPort • 144 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 132, symbol: 'USD', isDefault: 0},
       {value: 2600, symbol: 'UAH', isDefault: 1}
     ],
     order: 2,
@@ -182,13 +182,13 @@ export const products = [
     photo: 'pathToFile.jpg',
     title: 'ViewSonic',
     type: 'Monitors',
-    specification: 'Specification 1',
+    specification: 'IPS • 1920x1080  • 16:9 • HDMI (2x) • DisplayPort • 144 Гц',
     guarantee: {
       start: '2017-06-29 12:09:33',
-      end: '2017-06-29 12:09:33'
+      end: '2020-06-29 12:09:33'
     },
     price: [
-      {value: 100, symbol: 'USD', isDefault: 0},
+      {value: 185, symbol: 'USD', isDefault: 0},
       {value: 2600, symbol: 'UAH', isDefault: 1}
     ],
     order: 2,
