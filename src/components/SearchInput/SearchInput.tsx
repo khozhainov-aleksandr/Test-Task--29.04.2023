@@ -1,12 +1,14 @@
-'use client';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux'
+import { searchInput } from '../../../slices/counterSlice'
 
 import styles from './SearchInput.module.css'
 
 export default function SearchInput() {
-  const [search, setSearch] = useState('');
+  const dispatch = useDispatch();
+  const [search, setSearch] = useState<string>('');
 
-  console.log('search =', search);
+  dispatch(searchInput(search));
 
   return (
     <input
