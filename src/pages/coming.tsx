@@ -4,7 +4,7 @@ import { products } from '@/pages/api/app';
 import PageTitleQuantity from '@/components/PageTitleQuantity/PageTitleQuantity';
 import Products from '@/components/Products/Products'
 
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Coming.module.css'
 
 interface Product {
   id: number;
