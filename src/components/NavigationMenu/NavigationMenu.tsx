@@ -8,11 +8,11 @@ import SettingsIcon from '../../icon/settings.svg';
 import styles from './NavigationMenu.module.css'
 
 const linkForRouting = [
-  { title: 'coming', showName: 'Приход' },
-  { title: 'groups', showName: 'Группы' },
-  { title: 'products', showName: 'Продукты' },
-  { title: 'users', showName: 'Пользователи' },
-  { title: 'settings', showName: 'Настройки' },
+  { title: 'coming', showName: 'Incoming' },
+  { title: 'groups', showName: 'Groups' },
+  { title: 'products', showName: 'Products' },
+  { title: 'users', showName: 'Users' },
+  { title: 'settings', showName: 'Settings' },
 ];
 
 const NavigationMenu = () => {

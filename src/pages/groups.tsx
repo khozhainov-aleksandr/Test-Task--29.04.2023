@@ -38,17 +38,17 @@ const Groups = () => {
 
   return (
     <main className={styles.main}>
-      <PageTitleQuantity title='Группы' quantity={orders.length} />
+      <PageTitleQuantity title='Groups' quantity={orders.length} />
       <div className={styles.groupAndProductWrapper}>
         <Orders
           filterProdList={pullProdList}
         />
         {filterProducts.length >= 1 && (
           <div className={styles.productWrapper}>
-            <h2 className={styles.productTitle}>Все продукты</h2>
+            <h2 className={styles.productTitle}>All products</h2>
             <div className={styles.addProductWrapper}>
               <Image src={addProductIcon} alt='icon add product' />
-              <p className={styles.addProductDes}>Добавить продукт</p>
+              <p className={styles.addProductDes}>Add product</p>
             </div>
             <Products prodList={filterProducts} />
           </div>

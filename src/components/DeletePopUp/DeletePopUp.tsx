@@ -37,7 +37,7 @@ const DeletePopUp = ({ setPopUpClose, deleteEl }: Props) => {
           X
         </button>
         <h6 className={styles.popUpTitle}>
-          Вы уверены, что хотите удалить этот приход?
+          Are you sure you want to delete this entry?
         </h6>
         <div className={styles.prodCard}>
           <span className={styles.prodCardStatus} />
@@ -53,11 +53,11 @@ const DeletePopUp = ({ setPopUpClose, deleteEl }: Props) => {
         </div>
         <div className={styles.actionChoice}>
           <div className={styles.cancelAction} onClick={getCancelProd}>
-            Отменить
+            Cancel
           </div>
           <div className={styles.deleteAction} onClick={getDeleteProd}>
             <Image className={styles.deleteIcon} src={deleteIcon} alt="Delete icon" />
-            Удалить
+            Delete
           </div>
         </div>
       </div>

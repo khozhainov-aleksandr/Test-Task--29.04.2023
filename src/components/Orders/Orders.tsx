@@ -59,10 +59,10 @@ const Orders = ({ filterProdList }: Props) => {
             </button>
             <p className={styles.productQuantity}>
               <span>{countProd}</span>
-              Продукта
+              Product
             </p>
             <p className={styles.productDate}>
-              <span>Время</span>
+              <span>Time</span>
               {order.date}
             </p>
           </div>

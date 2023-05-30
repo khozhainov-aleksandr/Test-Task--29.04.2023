@@ -30,7 +30,7 @@ export default function Coming() {
   return (
     <main className={styles.main}>
       <PageTitleQuantity
-        title='Приходы'
+        title='Incoming'
         quantity={products.length}
       />
       <Products prodList={filterProducts} />

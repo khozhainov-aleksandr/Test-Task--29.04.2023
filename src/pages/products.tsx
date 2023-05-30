@@ -54,19 +54,19 @@ export default function ProductsPage() {
   return (
     <main className={styles.main}>
       <PageTitleQuantity
-        title='Продукты'
+        title='Products'
         quantity={products.length}
       />
       <div className={styles.formsWrapper}>
         <div className={styles.formWrapper}>
-          Бренд монитора: 
+          Monitor brand: 
           <Form.Select
             size="sm"
             onChange={(event) => {
               setBrand(event.target.value);
             }}
           >
-            <option value=''>Выбор бренда</option>
+            <option value=''>Brand choice</option>
             {brandArr.map((br, i) => (
               <option key={i} value={br}>
                 {br}
@@ -75,14 +75,14 @@ export default function ProductsPage() {
           </Form.Select>
         </div>
         <div className={styles.formWrapper}>
-          Спецификация монитора: 
+          Monitor specification: 
           <Form.Select
             size="sm"
             onChange={(event) => {
               setSpecif(event.target.value);
             }}
           >
-            <option value=''>Выбор спецификации</option>
+            <option value=''>Specification selection</option>
             {specificationArr.map((spec, i) => (
               <option key={i} value={spec}>
                 {spec}
